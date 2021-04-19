@@ -6,9 +6,9 @@ Because I didn't want to spent over 100EUR for a simple gear stick with two or t
 
 After that I've used my multimeter to find out the connections between the pins on the socket.
 
-<del>Next step is to write the program and find out how to mount the shifter knob on my TH8A because the TH8A uses an M8 thread where the shifter provides an M12 thread.
+<del>Next step is to write the program and find out how to mount the shifter knob on my TH8A because the TH8A uses an M8 thread where the shifter provides an M12 thread.</del>
 
-Therefore I bought an M8 to M12 adapter on Amazon (not arrived yet) for 5EUR (maybe a litte bit expensive for a single adapter).</del>
+<del>Therefore I bought an M8 to M12 adapter on Amazon (not arrived yet) for 5EUR (maybe a litte bit expensive for a single adapter).</del>
 
 Next step is to write the program and find out how to mount the shifter knob on my TH8A because the TH8A uses an M9x1.25 thread where the shifter provides an M14x1.5 thread.
 
