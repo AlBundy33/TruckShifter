@@ -20,9 +20,10 @@ This is my numbering according to the colors on the plug.
 0 (black)   1 (blue)    2 (two wires, green/yellow)
 3 (purple)  4 (red)     5 (white)
 ```
-There is a resistor between red and white which has to be removed.
+ATTENTION: There is a resistor between red and white (range switch) which has to be removed.
+To open the shifter you can carefully remove the plastic-piece (with the printed gears) with a plastic tool (just pull the plastic-piece backwards).
 
-an this seems to be the connections between the pins
+These are the connections between the pins
 - range (front): 4 (red)+ 5 (white)
 - splitter (side): 2 (green)+ 3 (purple)
 - comfort shift (top): 0 + 2 (normally closed), 1 + 2 (normally open), 1 + 3 (normally open, only if splitter is closed), 0 + 3 (normally closed, if splitter is closed)
