@@ -31,9 +31,9 @@ These are the connections between the pins
 so i think the wiring could be done like this.
 ```
 0 + 2 + 4 -> GND
-1 -> PIN0
-3 -> PIN1
-5 -> PIN2
+1 -> PIN0 (comfort shift)
+3 -> PIN1 (splitter)
+5 -> PIN2 (range)
 ```
 
 Because I need only three buttons I think that I'll us a digispark for this project.
