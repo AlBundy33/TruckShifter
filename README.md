@@ -41,3 +41,4 @@ Because I need only three buttons I think that I'll us a digispark for this proj
 This s my current wiring diagram for my test-sketch
 ![wiring diagram (leonardo)](images/wiring_diagram_leonardo.png)
 the orange-cables are used for 5V and GND - all other colors are used according to the colors of the shifter (see above).
+The resistors in the diagram are 10kOhm pullup resistors.
