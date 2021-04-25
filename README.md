@@ -20,18 +20,22 @@ This is my numbering according to the colors on the plug.
 0 (black)   1 (blue)    2 (two wires, green/yellow)
 3 (purple)  4 (red)     5 (white)
 ```
+There is a resistor between red and white which has to be removed.
 
 an this seems to be the connections between the pins
-- range (front): 4 + 5
-- splitter (side): 2 + 3
+- range (front): 4 (red)+ 5 (white)
+- splitter (side): 2 (green)+ 3 (purple)
 - comfort shift (top): 0 + 2 (normally closed), 1 + 2 (normally open), 1 + 3 (normally open, only if splitter is closed), 0 + 3 (normally closed, if splitter is closed)
 
 so i think the wiring could be done like this.
 ```
-4 + 2 -> GND
+0 + 2 + 4 -> GND
 1 -> PIN0
 3 -> PIN1
 5 -> PIN2
 ```
 
 Because I need only three buttons I think that I'll us a digispark for this project.
+
+This s my current wiring diagram for my test-sketch
+![wiring diagram (leonardo)](images/wiring_diagram_leonardo.png)
