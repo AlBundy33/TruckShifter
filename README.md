@@ -38,8 +38,8 @@ so i think the wiring could be done like this.
 ```
 
 ![wiring diagram (leonardo)](images/wiring_diagram_leonardo.png)
-
 I'm using an arduino pro micro because it fits inside the shifter. :-)
+Attention: The wiring diagram uses pin 0, 1 and 2 instead of 18, 19 and 20!
 
 # Pictures
 ![open shifter](images/open_shifter.png)
