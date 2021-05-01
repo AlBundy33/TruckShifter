@@ -46,3 +46,4 @@ I'm using an arduino pro micro because it fits inside the shifter. :-)
 ![inside shifter 1](images/inside_shifter_1.png)
 ![inside shifter 2](images/inside_shifter_2.png)
 ![mounted pro micro](images/mounted_pro_micro.png)
+
