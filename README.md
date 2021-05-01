@@ -6,12 +6,13 @@ Because I didn't want to spent over 100EUR for a simple gear stick with two or t
 
 After that I've used my multimeter to find out the connections between the pins on the socket.
 
-<del>Next step is to write the program and find out how to mount the shifter knob on my TH8A because the TH8A uses an M8 thread where the shifter provides an M12 thread.</del>
+Later I had to open the shifter and could see the connections.
 
-<del>Therefore I bought an M8 to M12 adapter on Amazon (not arrived yet) for 5EUR (maybe a litte bit expensive for a single adapter).</del>
+The TH8A uses an M9x1.25 thread and the shifter provides an M14x1.5 thread - unfortuately I didn't find an adapter to buy.
 
-Next step is to write the program and find out how to mount the shifter knob on my TH8A because the TH8A uses an M9x1.25 thread where the shifter provides an M14x1.5 thread.
-If you have a 3D printer you can try this thing: https://www.thingiverse.com/thing:4827444
+Luckily a forum-member offerd my to print this adapter from thingiverse.
+
+https://www.thingiverse.com/thing:4827444
 
 # Pinout
 
@@ -24,20 +25,24 @@ ATTENTION: There is a resistor between red and white (range switch) which has to
 To open the shifter you can carefully remove the plastic-piece (with the printed gears) with a plastic tool (just pull the plastic-piece backwards).
 
 These are the connections between the pins
-- range (front): 4 (red)+ 5 (white)
-- splitter (side): 2 (green)+ 3 (purple)
 - comfort shift (top): 0 + 2 (normally closed), 1 + 2 (normally open), 1 + 3 (normally open, only if splitter is closed), 0 + 3 (normally closed, if splitter is closed)
+- splitter (side): 2 (green)+ 3 (purple)
+- range (front): 4 (red)+ 5 (white)
 
 so i think the wiring could be done like this.
 ```
-0 + 2 + 4 -> GND
-1 -> PIN0 (comfort shift)
-3 -> PIN1 (splitter)
-5 -> PIN2 (range)
+2 (green+yellow) + 4 (red) -> GND
+1 (blue) -> PIN18 (comfort shift)
+3 (purlple) -> PIN19 (splitter)
+5 (white) -> PIN20 (range)
 ```
 
-Because I need only three buttons I think that I'll us a digispark for this project.
-
-This s my current wiring diagram for my test-sketch
 ![wiring diagram (leonardo)](images/wiring_diagram_leonardo.png)
-the orange-cables are used for 5V and GND - all other colors are used according to the colors of the shifter (see above).
+
+I'm using an arduino pro micro because it fits inside the shifter. :-)
+
+# Pictures
+![open shifter](images/open_shifter.png)
+![inside shifter 1](images/inside_shifter_1.png)
+![inside shifter 2](images/inside_shifter_2.png)
+![mounted pro micro](images/mounted_pro_micro.png)
