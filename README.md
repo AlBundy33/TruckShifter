@@ -46,3 +46,11 @@ I'm using an arduino pro micro because it fits inside the shifter. :-)
 ![inside shifter 2](images/inside_shifter_2.png)
 ![mounted pro micro](images/mounted_pro_micro.png)
 
+
+Because I have multiple USB devices I had to change the name of the usb device.
+
+Therefore I've edited boards.txt from Arduino IDE and copied the complete block for leonardo.name=Arduino Leonardo
+
+Then I've changed the IDs from "leonardo." to "leonardo_truckshifter." and the name and usb_product from "Arduino Leonardo" to "Arduino Leonardo (TruckShifter)".
+
+As last step I've changed to VID to 0x2341 and the PID to 0xA001.
