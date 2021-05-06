@@ -1,11 +1,13 @@
 #include <Arduino.h>
 #include <Joystick.h>
 
+// pins to use
 #define COMFORT_SHIFT 18
 #define SPLITTER      19
 #define RANGE         20
 
-#define SHORT_PRESS 250
+// max time to be handled as short press
+#define SHORT_PRESS   250
 
 Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,
                    JOYSTICK_TYPE_JOYSTICK, 4, 0,
