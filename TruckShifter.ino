@@ -28,23 +28,17 @@ void loop() {
     int range = !digitalRead(RANGE);
     unsigned long cs_pressed;
 
-    if (cs == HIGH)
-    {
-      if (cs_press_time == 0L)
+    if (cs == HIGH && cs_press_time == 0L)
         cs_press_time = millis();
-    }
 
     if (cs_press_time > 0)
       cs_pressed = millis() - cs_press_time;
     else
       cs_pressed = 0L;
 
-    if (cs == LOW)
-      cs_press_time = 0L;
-
     if (cs_pressed > SHORT_PRESS)
     {
-      // long press
+      // hold / long press
       Joystick.setButton(1, HIGH);
     }
     else if (cs == LOW && cs_pressed > 0 && cs_pressed <= SHORT_PRESS)
@@ -56,7 +50,8 @@ void loop() {
 
     if (cs == LOW)
     {
-      // set both functions to LOW
+      // reset comfort shift state
+      cs_press_time = 0L;
       Joystick.setButton(0, LOW);
       Joystick.setButton(1, LOW);
     }
