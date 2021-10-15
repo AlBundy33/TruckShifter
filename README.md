@@ -40,6 +40,8 @@ so i think the wiring could be done like this.
 ![wiring diagram (leonardo)](images/wiring_diagram_promicro.png)
 I'm using an arduino pro micro because it fits inside the shifter. :-)
 
+You have to install this library in Arduino IDE: https://github.com/MHeironimus/ArduinoJoystickLibrary
+
 # Pictures
 ![open shifter](images/open_shifter.png)
 ![inside shifter 1](images/inside_shifter_1.png)
