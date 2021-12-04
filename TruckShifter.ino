@@ -17,6 +17,10 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,
 unsigned long cs_press_time = 0L;
 
 void setup() {
+    PORTD |= (1<<PORTD5);
+    PORTB |= (1<<PORTB0);
+    DDRD &= ~(1<<DDD5);
+    DDRB &= ~(1<<DDB0);
     pinMode(COMFORT_SHIFT, INPUT_PULLUP);
     pinMode(SPLITTER, INPUT_PULLUP);
     pinMode(RANGE, INPUT_PULLUP);
