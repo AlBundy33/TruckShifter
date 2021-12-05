@@ -56,3 +56,7 @@ Therefore I've edited boards.txt from Arduino IDE and copied the complete block 
 Then I've changed the IDs from "leonardo." to "leonardo_truckshifter." and the name and usb_product from "Arduino Leonardo" to "Arduino Leonardo (TruckShifter)".
 
 As last step I've changed to VID to 0x2341 and the PID to 0xA001.
+
+HINT: Arduino IDE uses different boards.txt - one is located in your installation-folder under hardware\arduino\avr and the other under %LOCALAPPDATA%\Arduino15\packages\arduino\hardware\avr\1.8.4 (at least on windows - versions may change).
+
+So if there is no "Arduino Leonardo (TruckShifter)" in your boards-list, make sure, that you have edited the correct boards.txt
