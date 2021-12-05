@@ -6,6 +6,9 @@
 #define SPLITTER      19
 #define RANGE         20
 
+// enable/disable debug-mode (serial output)
+// #define DEBUG
+
 // max time to be handled as short press
 #define SHORT_PRESS   250
 
@@ -30,7 +33,9 @@ void setup() {
     pinMode(COMFORT_SHIFT, INPUT_PULLUP);
     pinMode(SPLITTER, INPUT_PULLUP);
     pinMode(RANGE, INPUT_PULLUP);
+    #ifdef DEBUG
     Serial.begin(9600);
+    #endif
     Joystick.begin();
 }
 
@@ -71,10 +76,12 @@ void loop() {
     Joystick.setButton(2, splitter);
     Joystick.setButton(3, range);
 
+    #ifdef DEBUG
     Serial.print(cs);
     Serial.print("\t");
     Serial.print(splitter);
     Serial.print("\t");
     Serial.print(range);
     Serial.println();
+    #endif
 }
