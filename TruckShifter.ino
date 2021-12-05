@@ -17,10 +17,16 @@ Joystick_ Joystick(JOYSTICK_DEFAULT_REPORT_ID,
 unsigned long cs_press_time = 0L;
 
 void setup() {
-    PORTD |= (1<<PORTD5);
-    PORTB |= (1<<PORTB0);
-    DDRD &= ~(1<<DDD5);
-    DDRB &= ~(1<<DDB0);
+    // disable TX and RX LEDs
+    // see https://arduino.stackexchange.com/questions/3434/leonardo-disable-tx-and-rx-led
+    // and http://forum.arduino.cc/index.php?topic=145262.0
+    // TX_RX_LED_INIT; // DDRD |= (1<<5), DDRB |= (1<<0)
+    // it seems that TX_RX_LED_INIT makes PORTD5 and PORTB0 output pins
+    // but we want to disable them and so we making them to inputs
+    DDRD &= ~(1<<DDD5), DDRB &= ~(1<<DDB0);
+    // set TX and RX pins to LOW
+    TXLED0;
+    RXLED0;
     pinMode(COMFORT_SHIFT, INPUT_PULLUP);
     pinMode(SPLITTER, INPUT_PULLUP);
     pinMode(RANGE, INPUT_PULLUP);
